@@ -1,0 +1,10 @@
+const milesToTravel = 80;
+const fuelPrice = 131;
+const carMPG = 70;
+const mpgCarCost = carMPG/4.54609188
+
+const milesPerLiter= fuelCost/4.54609188
+
+const result = ((milesToTravel*fuelPrice)/mpgCarCost)/100;
+
+result.toFixed(2)
