@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import functions from "../functions";
+import Head from 'next/head';
 
 // Components 
 import Logo from "../componenets/MainLayout/CenteredLogo";
@@ -68,6 +69,9 @@ function index(props) {
 
     return ( 
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Register</title>
+            </Head>
             <Logo/>
             <h1> Create an Account </h1>
             {emailCheck && < ErrorText > Email is already taken </ErrorText>} 

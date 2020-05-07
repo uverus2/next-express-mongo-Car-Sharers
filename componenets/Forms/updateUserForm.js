@@ -158,11 +158,8 @@ function loginForm(props) {
     const [car, setCar] = useState("");
 
     const handleCreate = (name) => {
-        interestsList.push(name);
-        interestsValue.push(name);
-        setInterestsValue(interestsValue);
-        setInterestsList(interestsList);
-        return null;
+        setskillsValue([...interestsValue,name]);
+        setskillsList([...interestsList,name]);
     };
     
 

@@ -3,7 +3,9 @@ import functions from "../functions";
 import styled from "styled-components";
 import axios from "axios";
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 const moment = require('moment');
+
 
 
 //Components 
@@ -288,6 +290,9 @@ function driveView(props) {
 
     return (
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Drive View</title>
+            </Head>
             <ContentSection>
                 <h1>Driver Details</h1>
                 <MainDetailsWrap>

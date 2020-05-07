@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import functions from "../functions";
+import Head from 'next/head';
 // Components
 import Button from "../componenets/MainButton";
 import SecondaryButton from "../componenets/SecondaryButton";
@@ -114,6 +115,9 @@ function index(props) {
 
     return (
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Home </title>
+            </Head>
             <HeroSection>
                 <InnerHero>
                     <h1>Looking for a ride?</h1>

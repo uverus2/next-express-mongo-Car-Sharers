@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import functions from "../functions";
 import styled from "styled-components";
 import axios from "axios";
+import Head from 'next/head';
 
 // Components
 import Card from "../componenets/Card";
@@ -87,6 +88,9 @@ function MyTrips(props) {
 
     return (
         <MainWrap>
+            <Head>
+                <title>Car Sharers - My Trips</title>
+            </Head>
             <h1>My Trips</h1>
             {tripsCheck && (<h2>No Current Trips</h2>)}
             {userStatuses.payed.length > 0 && ( 

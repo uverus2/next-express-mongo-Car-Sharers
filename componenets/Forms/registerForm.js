@@ -159,11 +159,8 @@ function loginForm(props) {
     const [interestsList, setInterestsList] = useState(["Sports", "Classical Movies","Web Development", "Comedies"]);
 
     const handleCreate = (name) => {
-        interestsList.push(name);
-        interestsValue.push(name);
-        setInterestsValue(interestsValue);
-        setInterestsList(interestsList);
-        return null;
+        setskillsValue([...interestsValue,name]);
+        setskillsList([...interestsList,name]);
     };
 
     const changeArray = (value) => setInterestsValue(value);

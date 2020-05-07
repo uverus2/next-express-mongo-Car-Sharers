@@ -2,6 +2,7 @@ import React, {useState, useEffect,useMemo} from 'react';
 import functions from "../functions";
 import styled from "styled-components";
 import axios from 'axios';
+import Head from 'next/head';
 
 //Components
 import Button from "../componenets/MainButton";
@@ -112,6 +113,9 @@ function UserProfile(props) {
 
     return (
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Profile</title>
+            </Head>
             <MainDetailsWrap>
                 <ImageContainer> 
                     <img src="images/profile.jpg" alt=""/>

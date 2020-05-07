@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import functions from "../functions";
+import Head from 'next/head';
 
 // Components 
 import Form from "../componenets/Forms/updateUserForm";
@@ -75,6 +76,9 @@ function ProfileEdit(props) {
 
     return ( 
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Profile</title>
+            </Head>
             <h1> Update User Account </h1>
             <Form user={user} onSubmit = { dataSubmit }/> 
         </MainWrap>

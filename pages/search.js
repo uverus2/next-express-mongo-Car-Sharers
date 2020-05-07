@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import functions from "../functions";
 import styled from "styled-components";
 import axios from "axios";
+import Head from 'next/head';
 
 
 // Components
@@ -201,6 +202,9 @@ function Search(props) {
 
     return (
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Search</title>
+            </Head>
             <HeroSection>
                 <InnerHero>
                     <h1>Your Results</h1>

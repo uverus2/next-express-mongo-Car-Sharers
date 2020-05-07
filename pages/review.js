@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import functions from "../functions";
+import Head from 'next/head';
 
 //Components
 import Button from "../componenets/MainButton";
@@ -83,6 +84,9 @@ function Review(props) {
 
     return (
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Review</title>
+            </Head>
             <h1> Leave a Review </h1> 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <InputWrap>

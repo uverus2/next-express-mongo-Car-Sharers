@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import functions from "../functions";
+import Head from 'next/head';
 
 // Components 
 import Logo from "../componenets/MainLayout/CenteredLogo";
@@ -35,6 +36,9 @@ function index(props) {
 
     return ( 
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Login</title>
+            </Head>
             <Logo/>
             <h1> Log In Please </h1> 
             <Form onSubmit={dataSubmit}/> 

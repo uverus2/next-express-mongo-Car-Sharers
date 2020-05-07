@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import functions from "../functions";
+import Head from 'next/head';
 
 // Components 
 import Form from "../componenets/Forms/newTripForm";
@@ -58,6 +59,9 @@ function TripsAdd(props) {
 
     return ( 
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Add Trip</title>
+            </Head>
             <h1> Create a drive </h1>
             <Form onSubmit = {dataSubmit}/> 
         </MainWrap>

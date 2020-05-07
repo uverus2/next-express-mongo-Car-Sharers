@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import Head from 'next/head';
 
 
 // Components 
@@ -238,6 +239,9 @@ const SectionWrap = styled.div`
 function Landing(props) {
     return ( 
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Landing</title>
+            </Head>
             <Logo/>
             <MainContentWrap>
                 <MainContent>

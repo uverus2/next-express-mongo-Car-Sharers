@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import functions from "../functions";
+import Head from 'next/head';
 
 // Components 
 import Logo from "../componenets/MainLayout/CenteredLogo";
@@ -64,6 +65,9 @@ function Additional(props) {
 
     return (
         <MainWrap>
+            <Head>
+                <title>Car Sharers - Additional</title>
+            </Head>
             <Logo/>
             <h1>Tell us a bit more to continue</h1>
             <Form onSubmit={dataSubmit} />

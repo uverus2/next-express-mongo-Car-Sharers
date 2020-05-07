@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import functions from "../functions";
 import styled from "styled-components";
 import axios from "axios";
+import Head from 'next/head';
 
 
 // Components
@@ -35,8 +36,9 @@ function MyDrives(props) {
     useEffect(() => {
         (async() => {
             try {
-                const tripsData = await axios(functions.getOptionsObject(`/trips/all`));
-                const filterDrives = tripsData.data.filter(i => i.drive.driver.user._id === user._id);
+                const tripsData = await axios(functions.getOptionsObject(`/drives/all`));
+                console.log(tripsData);
+                const filterDrives = tripsData.data.filter(i => i.driver.user._id === user._id);
                 setUserDrives(filterDrives);
             } catch (e) {
                 console.log(e);
@@ -46,18 +48,21 @@ function MyDrives(props) {
 
    
     
-    const historyDrives = userDrives.filter(i => moment.utc(i.drive.fromDate).isBefore());
-    const upcomingDrives = userDrives.filter(i => moment.utc(i.drive.fromDate).isSame() || moment.utc(i.drive.fromDate).isAfter());
+    const historyDrives = userDrives.filter(i => moment.utc(i.fromDate).isBefore());
+    const upcomingDrives = userDrives.filter(i => moment.utc(i.fromDate).isSame() || moment.utc(i.fromDate).isAfter());
     const history = historyDrives.map(i => {
-        return <HistoryCard user={i.drive} clickInfo={i.drive.slug} key={i.slug}/>
+        return <HistoryCard user={i} clickInfo={i.slug} key={i.slug}/>
     });
 
     const upcoming = upcomingDrives.map(i => {
-        return <Card clickTo="driver-page" user={i.drive} clickInfo={i.drive.slug} key={i.slug}/>
+        return <Card clickTo="driver-page" user={i} clickInfo={i.slug} key={i.slug}/>
     });
 
     return ( 
         <MainWrap>
+            <Head>
+                <title>Car Sharers - My Drives</title>
+            </Head>
             <h1>My Drives</h1>
             {userDrives.length <= 0 && (<h2>No Drives currently</h2>)}
             <CardsWrap>

@@ -76,7 +76,6 @@ app.prepare().then(() => {
 
     const j = schedule.scheduleJob({ hour: 00, minute: 00 }, function() {
         changeStatus(Trips);
-        console.log("Spider");
     });
 
     // handling everything else with Next.js

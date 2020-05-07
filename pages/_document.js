@@ -10,7 +10,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-          <title>My page title</title>
+          <title>Car Shareres</title>
         <Head> 
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
