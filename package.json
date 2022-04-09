@@ -30,7 +30,7 @@
         "helmet": "^3.21.3",
         "leaflet": "^1.6.0",
         "leaflet-routing-machine": "^3.2.12",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "moment-timezone": "^0.5.28",
         "mongoose": "^5.9.2",
         "mongoose-slug-generator": "^1.0.4",
